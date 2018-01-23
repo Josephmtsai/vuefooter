@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h2><h1>{{ 'test1' | translate }}</h1></h2>
     <ul>
       <li>
         <a
@@ -85,18 +85,12 @@
 
 <script>
 export default {
+  name: 'footer',
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
     };
   },
-  async created () {
-    try {
-      
-    } catch (ex) {
-      alert(ex)
-    }
-  }
 };
 </script>
 
