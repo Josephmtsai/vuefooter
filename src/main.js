@@ -6,16 +6,22 @@ import Vuex from 'vuex';
 import vuexI18n from 'vuex-i18n';
 import App from './App';
 import router from './router';
+import store from './store'
 import en from './resource/en.json';
 
 import de from './resource/de.json';
+
 Vue.use(Vuex);
-const store = new Vuex.Store();
+
 Vue.config.productionTip = false;
-Vue.use(vuexI18n.plugin, store);
-Vue.i18n.add('en', en);
-Vue.i18n.add('de', de);
-Vue.i18n.set('de');
+
+Vue.use(VueI18n)
+const messages = {'en':en ,'de':de}
+const i18n = new VueI18n({
+  locale: 'en',
+  messages
+})
+
 
 /* eslint-disable no-new */
 new Vue({
@@ -23,4 +29,5 @@ new Vue({
   router,
   components: { App },
   template: '<App/>',
+  i18n
 });

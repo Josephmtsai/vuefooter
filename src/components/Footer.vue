@@ -2,6 +2,10 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2><h1>{{ 'test1' | translate }}</h1></h2>
+    <select v-model="$i18n.locale">
+        <option value="en">EN</option>
+        <option value="id">ID</option>
+    </select>
     <ul>
       <li>
         <a
