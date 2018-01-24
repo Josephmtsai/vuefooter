@@ -1,5 +1,9 @@
 import * as types from './mutations_type.js';
 
+// state
+export const state = {
+  selectedLanguage: '',
+}
 
 
 // mutations
